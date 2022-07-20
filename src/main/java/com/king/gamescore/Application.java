@@ -22,9 +22,9 @@ public class Application {
             System.in.read();
             server.stop();
 
-            LOGGER.warning("\nScoreboard server stopped!");
+            LOGGER.warning("\nGameScore server stopped!");
         } catch (IOException ex) {
-            LOGGER.log(Level.SEVERE, "Scoreboard server terminated unexpectedly!", ex);
+            LOGGER.log(Level.SEVERE, "GameScore server terminated unexpectedly!", ex);
         }
     }
 

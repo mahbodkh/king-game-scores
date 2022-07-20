@@ -27,7 +27,7 @@ public class ShutdownHttpServer extends Thread {
         if (httpServer != null) {
             httpServer.stop(0);
         }
-        LOGGER.warning("Shutting down the Scoreboard server...");
+        LOGGER.warning("Shutting down the GameScore server...");
         LOGGER.info("Sending notifications to the system administrators...");
     }
 }
