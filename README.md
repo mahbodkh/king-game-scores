@@ -60,3 +60,19 @@ Response: CSV of <userid>=<score>
 <score> : 31 bit unsigned integer number
 <userid> : 31 bit unsigned integer number
 Example: http://localhost:8081/2/highscorelist - > 4711=1500,131=1220
+
+
+Requirements
+============
+
++ Java JDK 1.8 or higher.
++ JUnit 4.13 for testing proposes.
+
+
+Execution
+=========
+
+>       java -jar Scoregame.jar [-p portNumber]
+
+The argument `-p` is optional, if this argument is not present, the default port is 8081.
+
