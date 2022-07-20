@@ -1,0 +1,39 @@
+HELP.md
+.gradle
+/bin/
+/build/
+!gradle/wrapper/gradle-wrapper.jar
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+/out/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+### Helm chart ###
+helm/**/*.lock
+helm/**/charts
+helm/**/*.dec
+
+# exclude firebase secrets (can be used for debuging, set FIREBASE_CREDENTIALS_FILE=classpath:firebase.json)
+src/main/resources/firebase.json
