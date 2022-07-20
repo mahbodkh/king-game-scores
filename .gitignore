@@ -4,7 +4,7 @@ HELP.md
 /build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/target/
-!**/src/main/**/target/
+!**/src/test/**/target/
 !**/src/target/
 
 ### STS ###
