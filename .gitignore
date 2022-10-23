@@ -7,6 +7,7 @@ HELP.md
 !**/src/test/**/target/
 !**/src/target/
 **/target/
+target/
 
 ### STS ###
 .apt_generated
@@ -23,6 +24,9 @@ HELP.md
 *.iml
 *.ipr
 /out/
+.idea
+!**/src/main/**/out/
+!**/src/test/**/out/
 
 ### NetBeans ###
 /nbproject/private/
@@ -38,6 +42,12 @@ HELP.md
 helm/**/*.lock
 helm/**/charts
 helm/**/*.dec
+
+### VS Code ###
+.vscode/
+
+### Mac OS ###
+.DS_Store
 
 # exclude firebase secrets (can be used for debuging, set FIREBASE_CREDENTIALS_FILE=classpath:firebase.json)
 src/main/resources/firebase.json
