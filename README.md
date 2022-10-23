@@ -1,4 +1,4 @@
-The code implements a HTTP-based mini game back-end in Java which registers game scores for different users and levels, with the capability to return high score lists per level. 
+The code implements a HTTP-based mini-game back-end in Java which registers game scores for different users and levels, with the capability to return high score lists per level. 
 There is also a simple login system, without any authentication.
 
 Non-functional requirements
@@ -65,7 +65,7 @@ Example: http://localhost:8081/2/highscorelist - > 4711=1500,131=1220
 Requirements
 ============
 
-+ Java JDK 1.8 or higher.
++ Java JDK 11 or higher.
 + JUnit 4.13 for testing proposes.
 
 
