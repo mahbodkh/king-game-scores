@@ -4,7 +4,7 @@ package com.king.gamescore.properties;
 public class PropertiesManager {
 
     private static volatile PropertiesManager instance = null;
-    private final static Object lock = new Object();
+    private static final Object lock = new Object();
 
     private final LoggingPropertiesManager loggingPropertiesManager;
     private final ServerPropertiesManager serverPropertiesManager;

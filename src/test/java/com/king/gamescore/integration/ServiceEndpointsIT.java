@@ -37,10 +37,6 @@ public class ServiceEndpointsIT {
         http = new ServiceEndpointsIT();
     }
 
-//    @Test
-//    public void testLoginService() {
-//        assertEquals(200, http.sendGet(getLoginUrl).getCode());
-//    }
 
     @Test
     public void testLoginServiceWrongUri() {

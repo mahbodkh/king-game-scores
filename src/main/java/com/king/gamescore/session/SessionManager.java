@@ -5,6 +5,7 @@ import com.king.gamescore.service.UserLogoutTimerTask;
 
 import java.math.BigInteger;
 import java.security.SecureRandom;
+import java.text.MessageFormat;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.Map;
@@ -122,9 +123,13 @@ public class SessionManager {
         for (UserSession userSession : userSessions.values()) {
             if (now.getTime() - userSession.getCreatedDate().getTime() > logoutTimeout) {
                 userSession = userSessions.remove(userSession.getUserId());
-                LOGGER.info("UserLogoutTimerTask: Removing userSession [" + userSession + "]");
+                userSessionLogger(userSession);
             }
         }
+    }
+
+    private static void userSessionLogger(UserSession userSession) {
+        LOGGER.info(() -> MessageFormat.format("UserLogoutTimerTask: Removing userSession [ \"{0}\" ]", userSession));
     }
 
     /**

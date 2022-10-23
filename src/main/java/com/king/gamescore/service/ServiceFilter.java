@@ -16,7 +16,7 @@ public class ServiceFilter extends Filter {
         if(ServicesEnum.isValidService(httpExchange.getRequestURI().toString())){
             chain.doFilter(httpExchange);
         } else {
-            LOGGER.warning("No service for the request: " + httpExchange.getRequestURI().toString());
+            LOGGER.warning( () -> "No service for the request: " + httpExchange.getRequestURI().toString());
             httpExchange.sendResponseHeaders(HttpCodes.BAD_REQUEST.getCode(), -1);
             httpExchange.getResponseBody().close();
         }

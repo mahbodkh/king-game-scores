@@ -1,5 +1,8 @@
 package com.king.gamescore.properties;
 
+/**
+ * sever properties configuration.
+ */
 public enum ServerProperties {
 
     SERVER_PORT((getProperty("SERVER_PORT") != null) ? Integer.parseInt(getProperty("SERVER_PORT")) : 8081),

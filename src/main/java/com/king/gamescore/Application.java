@@ -24,7 +24,7 @@ public class Application {
 
             LOGGER.warning("\nGameScore server stopped!");
         } catch (IOException ex) {
-            LOGGER.log(Level.SEVERE, "GameScore server terminated unexpectedly!", ex);
+            LOGGER.log(Level.SEVERE, ex, () -> "GameScore server terminated unexpectedly!");
         }
     }
 

@@ -13,7 +13,7 @@ public class LoggingPropertiesManager {
     private static final String LOGGING_PROPERTIES = "logging.properties";
 
     private static volatile LoggingPropertiesManager instance = null;
-    private final static Object lock = new Object();
+    private static final Object lock = new Object();
 
     private LoggingPropertiesManager() {
         load();

@@ -6,6 +6,7 @@ import com.king.gamescore.util.HttpCodes;
 import com.sun.net.httpserver.HttpExchange;
 
 import java.io.IOException;
+import java.text.MessageFormat;
 import java.util.logging.Logger;
 
 /**
@@ -24,13 +25,13 @@ public class LoginService implements ServiceHandler {
     @Override
     public void handle(HttpExchange httpExchange) throws IOException {
         final long startTime = System.nanoTime();
-        LOGGER.info(String.format("LOGIN Request (userId= %s )", userId));
+        LOGGER.info(() -> MessageFormat.format("LOGIN Request (userId= \"{0}\" )", userId));
 
         final String sessionKey = SessionManager.getInstance().createUserSession(userId).getSessionKey();
         httpExchange.sendResponseHeaders(HttpCodes.OK.getCode(), sessionKey.length());
         httpExchange.getResponseBody().write(sessionKey.getBytes());
 
-        LOGGER.info(String.format("LOGIN Request ( userId=%s ) RETURNS: sessionKey= %s, takes: %s ms"
+        LOGGER.info(() -> MessageFormat.format("LOGIN Request ( userId=\"{0}\" ) RETURNS: sessionKey=\"{1}\", takes: \"{2}\" ms"
                 , userId
                 , sessionKey
                 , (System.nanoTime() - startTime) / 1000000

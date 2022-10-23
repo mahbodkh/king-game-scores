@@ -7,7 +7,7 @@ public enum ConfigProperties {
     LOGOUT_TIMEOUT_PERIOD_DELAY((getProperty("LOGOUT_TIMEOUT_PERIOD_DELAY") != null) ? getProperty("LOGOUT_TIMEOUT_PERIOD_DELAY") : String.valueOf(0)),
     MAX_HIGH_SCORES_RETURNED((getProperty("MAX_HIGH_SCORES_RETURNED") != null) ? getProperty("MAX_HIGH_SCORES_RETURNED") : String.valueOf(15));
 
-    private String value;
+    private final String value;
 
     ConfigProperties(String value) {
         this.value = value;

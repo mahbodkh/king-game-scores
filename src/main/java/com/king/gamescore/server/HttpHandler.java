@@ -14,11 +14,12 @@ import java.util.Objects;
 /**
  *
  * The http server handler for handling requests.
- * When a request has reached this point, it is sure that is a valid one.
- *
+ * When a request has reached this point, to ensure that it is a valid one.
  */
 public class HttpHandler implements com.sun.net.httpserver.HttpHandler {
 
+    private static final String SLASH = "/";
+    private static final String EQUAL = "=";
     @Override
     public void handle(HttpExchange httpExchange) throws IOException {
 

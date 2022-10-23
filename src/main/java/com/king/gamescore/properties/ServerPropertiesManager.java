@@ -12,7 +12,7 @@ public class ServerPropertiesManager {
     private static final String SERVER_PROPERTIES = "server.properties";
 
     private static volatile ServerPropertiesManager instance = null;
-    private final static Object lock = new Object();
+    private static final Object lock = new Object();
 
     private final Properties properties;
 
@@ -44,7 +44,7 @@ public class ServerPropertiesManager {
         try {
             properties.load(this.getClass().getClassLoader().getResourceAsStream(SERVER_PROPERTIES));
         } catch (IOException e) {
-            LOGGER.log(Level.SEVERE, "Couldn't load server properties...", e);
+            LOGGER.log(Level.SEVERE, e, () -> "Couldn't load server properties...");
         }
     }
 

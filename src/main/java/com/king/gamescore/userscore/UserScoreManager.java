@@ -8,7 +8,7 @@ import java.util.concurrent.ConcurrentSkipListSet;
 public class UserScoreManager {
 
     private static volatile UserScoreManager instance = null;
-    private final static Object lock = new Object();
+    private static final Object lock = new Object();
 
     private final Map<Integer, ConcurrentSkipListSet<UserScore>> userScores = new ConcurrentHashMap<>();
 
@@ -81,7 +81,7 @@ public class UserScoreManager {
     @Override
     public String toString() {
         return "UserScoreManager{" +
-                "userScores=" + userScores.toString() +
+                "userScores=" + userScores +
                 '}';
     }
 }

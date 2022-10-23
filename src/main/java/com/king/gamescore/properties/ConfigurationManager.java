@@ -11,7 +11,7 @@ public class ConfigurationManager {
     private static final String CONFIGURATION_PROPERTIES = "configuration.properties";
 
     private static volatile ConfigurationManager instance = null;
-    private final static Object lock = new Object();
+    private static final Object lock = new Object();
 
     private final Properties properties;
 

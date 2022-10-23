@@ -53,10 +53,7 @@ public enum ServicesEnum {
      * @return true if the given path corresponds to a valid service endpoint, false otherwise
      */
     public static boolean isValidService(String path) {
-        if(isHighScoreListService(path) || isLoginService(path) || isUserScoreLevelService(path)){
-            return true;
-        }
-        return false;
+        return isHighScoreListService(path) || isLoginService(path) || isUserScoreLevelService(path);
     }
 
     /**
