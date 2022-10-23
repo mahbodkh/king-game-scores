@@ -12,7 +12,6 @@ import java.io.IOException;
 import java.util.Objects;
 
 /**
- * Created by ioannis.metaxas on 2015-11-28.
  *
  * The http server handler for handling requests.
  * When a request has reached this point, it is sure that is a valid one.
